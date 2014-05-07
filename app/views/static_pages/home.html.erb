@@ -1,0 +1,26 @@
+<% if user_signed_in? %>
+	<h1> Looks like you're ready to brew brah!</h1>
+
+	<h2> "First, what fancy thing are you brewing with?"</h2>
+
+	<%= link_to "Freedom Press", press_path,
+									class: "btn btn-large btn-primary" %>
+
+<%= link_to "Paper Time", paper_path,
+									class: "btn btn-large btn-primary" %>
+
+<%= link_to "Cowboyz", cowboy_path,
+									class: "btn btn-large btn-primary" %>
+
+<% else %>
+<div class= "center hero-unit">
+	<h1>It's about time to make some coffee</h1>
+
+	<h2>Looks like you want to get serious about making coffee, good on you!</h2> 
+
+	<%= link_to "Start Brewing", new_user_registration_path,
+									class: "btn btn-large btn-primary" %>
+
+	</div>
+
+	<% end %>
