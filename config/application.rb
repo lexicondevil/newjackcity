@@ -1,4 +1,4 @@
-require File.expand_path('../boot', __FILE__)
+ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
@@ -58,5 +58,9 @@ module Omrails
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # For devise on Heroku
+    config.assets.intialize_on_precompile = false
+    
   end
 end
